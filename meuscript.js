@@ -10,3 +10,27 @@ function soma(){
     return soma;
   
   }
+
+  function mostraSituacao(media){
+      if(media >= 7){
+          alert("Aprovado!");
+      }
+      else{
+          alert("Reprovado!");
+      }
+  }
+
+  function perguntaEndereco(){
+      do{
+          endereco = prompt("Insira o seu endereço: ");
+          confirma = confirm("Seu endereço é " + enderco + "?");
+      }while(!confirma);
+      alert("A página será alterada...");
+      document.write("Seu endereço é "+endereco+".");
+  }
+
+  function maiuscula(texto){
+
+    texto.value = texto.value.toUpperCase();
+  
+  }

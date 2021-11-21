@@ -8,7 +8,7 @@
     <script src="meuscript.js"></script>
     <link rel="stylesheet" type="text/css" href="layout.css"  media="screen"/>
 </head>
-<body>
+<body onLoad="perguntaEndereco();"">
     
     <h1 id="especial">Olá, Mundo! </h1>
     <hr>
@@ -17,9 +17,16 @@
 
     <script type="text/javascript">
 
-        document.write("Part gerada via JavaScript");
+        document.write("Parte gerada via JavaScript");
    
       </script>   
+          <form>
+
+            Letra maiúscula:<br />
+      
+            <textarea name="letra" onKeyUp="maiuscula(this);"></textarea><br />
+      
+          </form>
 
 </body>
 </html>
