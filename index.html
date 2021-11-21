@@ -8,7 +8,7 @@
     <script src="meuscript.js"></script>
     <link rel="stylesheet" type="text/css" href="layout.css"  media="screen"/>
 </head>
-<body onLoad="perguntaEndereco();"">
+<body onLoad="soma();"">
     
     <h1 id="especial">Olá, Mundo! </h1>
     <hr>
@@ -25,6 +25,27 @@
             Letra maiúscula:<br />
       
             <textarea name="letra" onKeyUp="maiuscula(this);"></textarea><br />
+      
+          </form>
+
+          <form name="formulario">
+
+            <input type="radio" name="habilita" value="sim"
+      
+                   onClick="HabilitarCampo(1);">Habilita<br/>
+      
+            <input type="radio" name="habilita" value="nao"
+      
+                   onClick="HabilitarCampo(0);" checked>Desabilita<br/>
+      
+            Campo: <input type="text" name="nome" disabled>
+      
+          </form>
+          <form name="formularioBusca" action="busca.js" onSubmit="return valida();">
+
+            Procurar: <input type="text" name="busca" required><br>
+      
+            <input type="submit">
       
           </form>
 
