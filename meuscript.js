@@ -77,3 +77,60 @@ function soma(){
     return true;
   
   }
+  // Examplos de máscaras js para campos comuns
+
+  // Números
+
+function numeros(v){
+
+    // Remove os caracteres não numéricos
+  
+    v.value=v.value.replace(/\D/g,"");
+  
+  }
+  // Data
+  function data(v){
+  
+    v.value=v.value.replace(/\D/g,"");
+  
+    //Adiciona a barra entre o dia e o mês 
+  
+    v.value=v.value.replace(/^(\d{2})(\d)/,"$1/$2");
+  
+    //Adiciona a barra entre o mês e o ano
+  
+    v.value=v.value.replace(/(\d{2})(\d)/,"$1/$2");
+  
+  }
+  //Telefone com DDD
+  function telefone(v){
+  
+    v.value=v.value.replace(/\D/g,"");
+  
+    //Adiciona parênteses no DDD
+  
+    v.value=v.value.replace(/^(\d\d)(\d)/g,"($1) $2");
+  
+    //Adiciona hífen no número do telefone
+  
+    v.value=v.value.replace(/(\d{4})(\d)/,"$1-$2");
+  
+  }
+  // CPF
+  function cpf(v){
+  
+    v.value=v.value.replace(/\D/g,"");
+  
+    //Adiciona ponto após os três primeiros números
+  
+    v.value=v.value.replace(/^(\d{3})(\d)/,"$1.$2");
+  
+    //Adiciona ponto após os seis primeiros números
+  
+    v.value=v.value.replace(/(\d{3})(\d)/,"$1.$2");
+  
+    //Adiciona o hífen antes dos últimos 2 caracteres
+  
+    v.value=v.value.replace(/(\d{3})(\d{1,2})$/,"$1-$2");
+  
+  }
