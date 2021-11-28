@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Escrevendo no HTML com jQuery</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+  <div id="nome"> José da Silva</div>
+    <script>           
+        $(function(){
+          // coleta valor do elemento nome
+          var nome = $("#nome").text();
+          // separa o texto pelo espaço " "
+          aux = nome.split(" ");
+          // corrige o nome exibindo só o primeiro
+          var novo_nome = aux[0];
+          // grava o novo nome
+          $("#data").text(novo_nome);
+    });
+  </script>
+</body>
+</html>
